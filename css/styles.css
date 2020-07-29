@@ -70,6 +70,13 @@ img{
 .menu-list img{
     vertical-align: top;
 }
+.burger-icon{
+    float:right;
+    display: none;
+}
+.burger-menu{
+    display:none;
+}
 .main-title{
     text-align: center;
     color:white;
@@ -305,6 +312,11 @@ dd{
     font-size: 15px;
     line-height:1.5;
     color:#b3b3b3;
+}
+#acc-arrow{
+    float:right;
+    margin-right: 7px;
+    margin-top: 12px;
 }
 .comment-wrapper{
     background-color: #f8f8f8;
@@ -619,9 +631,6 @@ p.job{
     font-style: italic;
     color:#9f9f9f;
 }
-input{
-    margin:0;
-}
 input[type="email"]{
     width:230px;
     padding:15px;
@@ -721,7 +730,38 @@ input[type="submit"]{
         
     }
     
-    
+    .burger-menu{
+        display:block;
+        z-index: 2;
+        position:absolute;
+        top:34px;
+        right:-100%;
+        width:100%;
+        border-bottom:2px solid black ;
+        transition:.4s;
+        overflow-y: hidden;
+    }
+    .burger-list > li{
+        width:100%;
+        border-top:2px solid black ;
+        
+        padding-left:18px;
+        font-size: 24px;
+        height:40px;
+        line-height:40px;
+        background-color:#c7c4c4 ;
+        color:black;
+   }
+    .cover {
+        z-index: 1;
+        position:fixed;
+        top:0;
+        left:0;
+        background-color:rgba(0,0,0,0.6);
+        height:100%;
+        width:100%;
+        
+    }
 }
     
 
