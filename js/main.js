@@ -15,13 +15,64 @@
                 $(target).addClass('current');
                return false; 
             });
-	 		$(window).scroll(function(){
-				
-				if($(window).scrollTop() >= 0 && $(window).scrollTop() < 500){
-					$('.gradient-wrapper').addClass('active');
-				}else{
-					$('.gradient-wrapper').removeClass('active');
-				}
-			});
+            $(".slider1 > .left-arrow").click(function(){
+                clearInterval(timer1);
+                timer1 = setInterval(forwardSlider,3000);
+                forwardSlider();
+            });
+            $(".slider1 > .right-arrow").click(function(){
+                clearInterval(timer1);
+                timer1 = setInterval(forwardSlider,3000);
+                reverseSlider();
+            });
+            $(".slider2 > .left-arrow").click(function(){
+                clearInterval(timer2);
+                timer2 = setInterval(forwardSlider2,3000);
+                forwardSlider2();
+            });
+            $(".slider2 > .right-arrow").click(function(){
+                clearInterval(timer2);
+                timer2 = setInterval(forwardSlider2,3000);
+                reverseSlider2();
+            });
+     
+            $('.slider1 > .message').prepend($('.slider1 li:last-child'));
+            $('.slider1 > .message').css("left",-1200);
+     
+     
+            var timer1 = setInterval(forwardSlider,3000);
+            function forwardSlider(){
+                $('.slider1 > .message').animate({"left":"-=1200px"},1000,function(){
+                $(this).append($('.slider1 li:first-child'));
+                $(this).css("left",-1200);
+                });
+            }
+            function reverseSlider(){
+                $('.slider1 > .message').animate({"left":"+=1200px"},1000,function(){
+                $(this).prepend($('.slider1 li:last-child'));
+                $(this).css("left",-1200);
+                });
+            }
+            $('.slider2 > .message').prepend($('.slider2 li:last-child'));
+            $('.slider2 > .message').css("left",-1200);
+     
+     
+            var timer2 = setInterval(forwardSlider2,3000);
+            function forwardSlider2(){
+                $('.slider2 > .message').animate({"left":"-=1200px"},1000,function(){
+                $(this).append($('.slider2 li:first-child'));
+                $(this).css("left",-1200);
+                });
+            }
+            function reverseSlider2(){
+                $('.slider2 > .message').animate({"left":"+=1200px"},1000,function(){
+                $(this).prepend($('.slider2 li:last-child'));
+                $(this).css("left",-1200);
+                });
+            }
+     
+            
+            
+            
         });
     
