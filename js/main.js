@@ -70,6 +70,14 @@
                 $(this).css("left",-1200);
                 });
             }
+            $(".burger-icon > img").click(function(){
+               $(".burger-menu").css("right",0); 
+                $(".cover").show();
+            });
+            $(".cover").click(function(){
+               $(".burger-menu").css("right","-100%");
+                $(".cover").hide();
+            });
      
             
             
