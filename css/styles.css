@@ -388,6 +388,7 @@ dd{
     font-size: 15px;
     line-height:1.5;
     color:#b3b3b3;
+    font-style: italic;
 }
 .acc-arrow{
     float:right;
@@ -420,6 +421,7 @@ dd{
     position:absolute;
     left:0;
     top:50%;
+
     margin-top:-11px;
     cursor:pointer;
     z-index:100;
@@ -472,7 +474,7 @@ dd{
     padding:100px 0 110px ;
     text-align:center; 
 }
-.teams-wrapper p{
+.teams-txt{
     font-size: 14px;
     margin-top: 95px;
     margin-bottom: 100px;
@@ -481,6 +483,9 @@ dd{
 .team{
     float:left;
     width:380px;
+}
+.sp-teams{
+    display:none;
 }
 .team-wrapper{
 	width:380px;
@@ -1098,25 +1103,157 @@ input[type="submit"]{
         line-height: 1.5
     }
     .device-wrapper{
-        padding-top:10px;
+        padding-top: 0;
         min-width:inherit;
-        background-size: contain;
         width:100%;
         height:auto;
+        background-size:cover;
+        
         
     }
+    .device-container .heading{
+        padding-top:8px;
+    }
+    
     .device-container{
-        width:100%;
+        width:280px;
         height:285px;
 
     }
     .device-container > img{
-        bottom:0px;
-        right:30%;
-        width:12%;
+        bottom:-30px;
+        right:30px;
+        width:80px;
         height:auto;
     }
+    .service-wrapper{
+        padding:30px 0 25px
+    }
+    .service-wrapper p{
+        margin:25px 0 20px;
+        font-size: 15px;
+        color: #b3b3b3;
+        font-style: italic;
+        
+    }
+    .service-img{
+        float:none;
+        width:68%;
+        margin:0 auto 24px;
+        
+    }
+    .service-img img{
+        width:100%;
+        height:auto;
+    }
+    .accordion{
+        float:none;
+        width:100%;
+        margin-left: 0;
+    }
+    .accordion dt a{
+        height:45px;
+    }
+    .accordion dt img{
+        width:15px;
+        vertical-align: middle;
+    }
+    .acc-arrow{
+        margin-top:5px;
+    }
+    dt span{
+        font-size: 16px;
+        margin-left: 32px;
+    }
+    .comment-wrapper {
+        min-width: inherit;
+    }
+    .slider1{
+        padding-top: 12px;
+        height:100px;
+    }
+    .left-arrow,.right-arrow{
+        width:7px;
+    }
+    .comment-icon{
+        width:43px;
+        margin-left:22px;
+        margin-right: 13px;
+        margin-top: 15px;
+    }
 
+    .message1{
+        font-size: 15px;
+        line-height: 1.5;
+        height:60px;
+        margin-left: 78px;
+        padding-top: 0;
+        overflow: hidden;
+    }
+    .name1{
+        font-size: 16px;
+        position:relative;
+        margin-left:100px ;
+        margin-top: 5px;
+    }
+    .name1:before{
+        content:'';
+        width:22px;
+        border:1px solid #f38181;
+        position:absolute;
+        top:50%;
+        margin-left:-30px;
 
+    }
+    .comment2-wrapper {
+        min-width: inherit;
+    }
+    .slider2{
+        padding-top: 25px;
+        height:130px;
+    }
+    .teams-wrapper{
+        padding:25px 0;
+    }
+    .teams-txt {
+        display:none;
+    }
+    .team{
+        width:100%;
+        float:none;
+    }
+    .team-gradient-wrapper{
+        display:none;
+    }
+    .sp-teams{
+        display: block;
+        float:left;
+        width:50%;
+        
+    }
+    .team-wrapper{
+        width:50%;
+    }
+    .sp-teams > p{
+        font-size: 15px;
+        color: #b3b3b3;
+        line-height: 1.5;
+    }
+    .social-icon-wrapper{
+        position:static;
+
+    }
+    .member-social-link{
+        font-size: 20px;
+        padding:10px;
+        color:#f38181;
+        background-color:#fce38e; 
+    }
+    p.member-name{
+        display:none;
+    }
+    p.job{
+        display: none;
+    }
 
 }
