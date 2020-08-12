@@ -554,6 +554,15 @@ p.job{
     min-width:1200px;
     
 }
+.emblem-wrapper-sp{
+    display:none;
+    background-image:url("../img/emblem_sp.png");
+    background-position: center center;
+    padding-top: 57%;
+    background-size:contain;
+    
+        
+}
 .photogalary-wrapper{
     padding-top: 110px;
     text-align:center; 
@@ -695,11 +704,14 @@ p.job{
     margin: 0 auto;
     margin-top:80px;
 }
+
 .blog{
-    position:relative;
     float:left;
     width:380px;
     
+}
+.article-wrapper{
+    position:relative;
 }
 
 .date-card{
@@ -727,7 +739,7 @@ p.job{
 }
 .blog-txt h3{
     font-size: 12px;
-    letter-spacing: 1.2;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 .blog-txt p{
@@ -1218,36 +1230,65 @@ input[type="submit"]{
     .teams-txt {
         display:none;
     }
+    .teams{
+        margin-top: 28px
+    }
     .team{
         width:100%;
         float:none;
+        display:flex;
     }
     .team-gradient-wrapper{
         display:none;
     }
     .sp-teams{
-        display: block;
-        float:left;
+        display: flex;
         width:50%;
-        
+        position:relative;
+        flex-direction: column;
+        justify-content: center;
     }
     .team-wrapper{
         width:50%;
+        height:auto;
+    }
+    .team-wrapper img{
+        width:100%;
+        height:auto;
     }
     .sp-teams > p{
-        font-size: 15px;
+        font-size: 16px;
         color: #b3b3b3;
-        line-height: 1.5;
+        line-height: 1.3;
+        letter-spacing: 2px;
+    }
+    .sp-teams .member-name-sp{
+        color:black;
+        margin:5px 0;
+    }
+    .sp-teams .job-sp{
+        color:black;
+        margin:5px 0;
     }
     .social-icon-wrapper{
         position:static;
-
+        margin:10px 0;
     }
     .member-social-link{
+        display:block;
+        float:left;
+        width:25%;;
         font-size: 20px;
         padding:10px;
         color:#f38181;
         background-color:#fce38e; 
+    }
+    .team:nth-of-type(odd) > .team-wrapper{
+        order:1;
+    }
+    
+    .team:nth-of-type(even) > .team-wrapper{
+        order:-1;
     }
     p.member-name{
         display:none;
@@ -1255,5 +1296,115 @@ input[type="submit"]{
     p.job{
         display: none;
     }
+    .team + .team{
+        margin:auto;
+    }
+    .emblem-wrapper{
+        display: none;
+    }
+    .emblem-wrapper-sp{
+        display: block;
+    }
+    
+    .photogalary-wrapper{
+        padding-top: 20px;
+    }
+    .heading-txt{
+        font-size: 16px;
+        color:#b3b3b3;
+        margin:25px 0;
+    }
+    .row1{
+        float:none;
+        width:100%;
+    }
+    .clients-wrapper {
+        padding-top: 5px;
+        min-width: auto;
+        height:auto;
+        background-size: cover;
+    }
+    .clients{
+        padding-top: 22px;
+    }
+    .client {
+        float: none;
+        width: 100%;
+        margin-right:auto;
+        margin-left: auto;
+        margin-bottom: 27px;
+    }
+    .client-info{
+        width:auto;
+    }
+    .client-info > p:first-child{
+        font-size: 16px;
+    }
+    .client-info > p:nth-of-type(2){
+        font-size: 16px;
+        margin-top: 3px;
+    }
+    .client-info > p:last-child{
+        font-size:15px;
+        letter-spacing: 2px;
+        margin-top: 23px;
+    }
+    .blog-wrapper{
+        text-align:center;
+        padding:25px 0 45px 0;
+    }
+    .blogs{
+        width:100%;
+        margin-top:25px;
+    }
+    .blog{
+        float:none;
+        width:92%;
+        margin: 0 auto;
 
+    }
+    .blog > img{
+        width:100%;
+        height:auto;
+    }
+    .blog + .blog{
+        margin:43px auto  0;
+    }
+    .blog-txt{
+        padding:20px 0;
+    }
+    .blog-txt h3{
+        font-size: 16px;
+        letter-spacing:normal;
+        margin-bottom: 15px;
+    }
+    .blog-txt p{
+        font-size: 15px;
+    }
+    .blog-counter{
+        padding-top: 15px;
+    }
+    .blog-counter span{
+        font-size: 14px;
+    }
+    .article-wrapper > img{
+        width:100%;
+        height:auto;
+    }
+.date-card{
+        width:20%;
+        height:36%;
+        left:0;
+        bottom:0;
+        top:auto;
+    padding-top:15px;
+    }
+    .date-card h1{
+
+        font-size: 50px;
+    }
+    .date-card h2{
+        font-size: 25px;
+        font-weight:lighter;
+    }
 }
