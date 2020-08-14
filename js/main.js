@@ -18,22 +18,22 @@
             $(".slider1 > .left-arrow").click(function(){
                 clearInterval(timer1);
                 timer1 = setInterval(forwardSlider,3000);
-                forwardSlider();
+                reverseSlider();
             });
             $(".slider1 > .right-arrow").click(function(){
                 clearInterval(timer1);
                 timer1 = setInterval(forwardSlider,3000);
-                reverseSlider();
+                forwardSlider();
             });
             $(".slider2 > .left-arrow").click(function(){
                 clearInterval(timer2);
                 timer2 = setInterval(forwardSlider2,3000);
-                forwardSlider2();
+                reverseSlider2();
             });
             $(".slider2 > .right-arrow").click(function(){
                 clearInterval(timer2);
                 timer2 = setInterval(forwardSlider2,3000);
-                reverseSlider2();
+                forwardSlider2();
             });
      
             $('.slider1 > .message').prepend($('.slider1 li:last-child'));
