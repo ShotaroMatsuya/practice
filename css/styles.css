@@ -100,6 +100,9 @@ img{
     float:right;
     display: none;
 }
+.burger-icon img{
+    width:30px;
+}
 .burger-menu{
     display:none;
 }
@@ -934,8 +937,9 @@ input[type="submit"]{
 }
 
 @media (max-width:640px){
-    body,html{
+    html,body{
         overflow-x: hidden;
+        position:relative;
     }
     .container{
         width:87%;
@@ -994,6 +998,7 @@ input[type="submit"]{
         width:100%;
         border-bottom:2px solid black ;
         transition:.4s;
+
     }
     .burger-list > li{
         width:100%;
@@ -1030,9 +1035,9 @@ input[type="submit"]{
     .nav-menu + .nav-menu{
         margin-left:0;
     }
-    .nav-menu > p{
-        font-size: 12px;
-        margin-top:0px;
+    .nav-text{
+        font-size: 10px;
+        margin-top:3px;
     }
     .intro-wrapper{
         padding:25px 0;
@@ -1077,7 +1082,7 @@ input[type="submit"]{
         float:none;
         width:100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         padding-bottom:12px;
     }
     .card{
@@ -1086,6 +1091,9 @@ input[type="submit"]{
         height:auto;
         padding:0;
         border:1px solid transparent;
+    }
+    .card + .card{
+        margin-left:20px;
     }
     .card > h2{
         font-size: 25px;
@@ -1291,13 +1299,17 @@ input[type="submit"]{
     .social-icon-wrapper{
         position:static;
         margin:10px 0;
+        width:100%;
+    }
+    .social-icon-wrapper i{
+        line-height: 56px;
     }
     .member-social-link{
         display:block;
         float:left;
         width:25%;;
         font-size: 20px;
-        padding:10px;
+        padding:0;
         color:#f38181;
         background-color:#fce38e; 
     }
@@ -1518,8 +1530,16 @@ input[type="submit"]{
         margin-bottom: 10px;
     }
     .column3 > .thumnails{
-        grid-template-columns:repeat(auto-fill,88px);
-        gap:12px;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        gap: 10px;    
+    }
+    .column3  li  a{
+        width:100%;
+        display:block;
+    }
+    .column3  li  img{
+        width:100%;
+        height:auto;
     }
     .column3 > a{
         font-size: 15px;
@@ -1537,11 +1557,16 @@ input[type="submit"]{
     }
     input[type="email"]{
         flex:8;
-        font-size: 17px;
+        font-size: 14px;
+        padding-right:0;
+        padding-left:5px;
     }
     input[type="submit"]{
         flex:5;
-        font-size: 20px;
+        font-size: 15px;
+        padding-right:0;
+        padding-left:0;
+
     }
 
 

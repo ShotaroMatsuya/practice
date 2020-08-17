@@ -1,20 +1,57 @@
  $(function(){
-           $('dd[id != "acc1"]').css({"height":"0px","padding":"0px"});
-           $('dt > a').click(function(){
+//           $('dd[id != "acc1"]').css({"height":"0px","padding":"0px"});
+//           $('dt > a').click(function(){
+//                var target = $(this).attr("href");
+//                var currentArrow = $('.current').prev('dt').children('a').children('.acc-arrow');
+//                var targetArrow = $(this).children('.acc-arrow');
+//                if($(target).hasClass('current')){
+//                    return false;
+//                }
+//                $(currentArrow).attr('src','img/down_arrrow.png');
+//                $('.current').animate({"height":"0px","padding":"0px"},200);
+//                $(targetArrow).attr('src','img/up_arrow.png');
+//                $(target).animate({"height":"180px","padding":"20px"},200);
+//                $('dd').removeClass('current');
+//                c
+//               return false; 
+//            });
+//     
+     
+            $('dd[id != "acc1"]').hide();
+            $('dt > a').click(function(){
                 var target = $(this).attr("href");
-                var currentArrow = $('.current').prev('dt').children('a').children('.acc-arrow');
                 var targetArrow = $(this).children('.acc-arrow');
                 if($(target).hasClass('current')){
-                    return false;
+                    $(target).slideUp(200);
+                    $(targetArrow).attr('src','img/down_arrrow.png');
+                    $(target).removeClass('current');
+                }else{
+                    $(target).addClass('current'); 
+                    $(target).slideDown(200);
+                    $(targetArrow).attr('src','img/up_arrow.png');
                 }
-                $(currentArrow).attr('src','img/down_arrrow.png');
-                $('.current').animate({"height":"0px","padding":"0px"},200);
-                $(targetArrow).attr('src','img/up_arrow.png');
-                $(target).animate({"height":"180px","padding":"20px"},200);
-                $('dd').removeClass('current');
-                $(target).addClass('current');
-               return false; 
+                return false;
+                    
             });
+     
+            
+//            $('dd[id != "acc1"]').css({"height":"0px","padding":"0px"});
+//            $('dt > a').click(function(){
+//                var target = $(this).attr("href");
+//                var targetArrow = $(this).children('.acc-arrow');
+//                if($(target).hasClass('current')){
+//                    $(target).animate({"height":"0px","padding":"0px"},200);
+//                    $(targetArrow).attr('src','img/down_arrrow.png');
+//                    $(target).removeClass('current');
+//                }else{
+//                    $(target).addClass('current'); 
+//                    $(target).animate({"height":"180px","padding":"20px"},200);
+//                    $(targetArrow).attr('src','img/up_arrow.png');
+//                }
+//                return false;
+//                    
+//            });
+     
             $(".slider1 > .left-arrow").click(function(){
                 clearInterval(timer1);
                 timer1 = setInterval(forwardSlider,3000);
@@ -73,10 +110,36 @@
             $(".burger-icon > img").click(function(){
                $(".burger-menu").css("right",0); 
                 $(".cover").show();
+                $("html,body").css('overflow-y','hidden');
             });
             $(".cover").click(function(){
                $(".burger-menu").css("right","-100%");
                 $(".cover").hide();
+                $("html,body").css('overflow-y','auto');
+            });
+     
+            
+            var currentImgUrl = 'img/navbar1.png';
+            var imgUrl = 'img/navbar2.png';
+            
+            $('.nav-menu').each(function(index,menu){
+                if($(menu).hasClass('currentImg')){
+                    $('.currentImg').children('img').attr('src',currentImgUrl);
+                }else{
+                    $(menu).children('img').attr('src',imgUrl);
+                }
+                $(menu).hover(function(){
+                    if($(this).hasClass('currentImg')){
+                        return ;    
+                    }else{
+                    $(this).children('img').attr('src',currentImgUrl);
+                        $('.currentImg').children('img').attr('src',imgUrl);
+                        $('.currentImg').removeClass('currentImg');
+                        $(this).addClass('currentImg');
+                        
+                    }
+                    
+                });
             });
      
             
